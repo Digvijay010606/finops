@@ -1,0 +1,8 @@
+scenario,annual_savings,pct_of_eligible
+On-Demand (baseline),0,0.0
+1-yr Reserved Instance,126620,24.5
+3-yr Reserved Instance,198974,38.5
+1-yr Compute Savings Plan,97678,18.9
+3-yr Compute Savings Plan,166414,32.2
+Spot for non-prod EC2 only,13533,2.6
+RECOMMENDED: 1-yr SP + Spot (non-prod),111211,21.5

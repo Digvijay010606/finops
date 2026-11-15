@@ -1,0 +1,57 @@
+week,cost_category,cost,pct_of_week
+2026-W30,Compute,1562.03,27.7
+2026-W30,Managed Services,1467.15,26.0
+2026-W30,Networking,561.09,10.0
+2026-W30,Storage,2043.23,36.3
+2026-W31,Compute,5989.8,27.6
+2026-W31,Managed Services,5658.68,26.1
+2026-W31,Networking,2151.33,9.9
+2026-W31,Storage,7872.11,36.3
+2026-W32,Compute,6036.39,27.7
+2026-W32,Managed Services,5656.92,25.9
+2026-W32,Networking,2163.68,9.9
+2026-W32,Storage,7956.54,36.5
+2026-W33,Compute,6113.41,27.9
+2026-W33,Managed Services,5648.53,25.8
+2026-W33,Networking,2171.23,9.9
+2026-W33,Storage,7993.26,36.5
+2026-W34,Compute,6098.91,27.8
+2026-W34,Managed Services,5717.99,26.0
+2026-W34,Networking,2162.41,9.8
+2026-W34,Storage,7988.11,36.4
+2026-W35,Compute,6106.8,27.7
+2026-W35,Managed Services,5713.16,25.9
+2026-W35,Networking,2165.32,9.8
+2026-W35,Storage,8031.6,36.5
+2026-W36,Compute,6631.98,29.3
+2026-W36,Managed Services,5710.1,25.3
+2026-W36,Networking,2187.43,9.7
+2026-W36,Storage,8075.55,35.7
+2026-W37,Compute,6175.25,27.7
+2026-W37,Managed Services,5801.35,26.0
+2026-W37,Networking,2185.29,9.8
+2026-W37,Storage,8110.6,36.4
+2026-W38,Compute,6213.7,27.7
+2026-W38,Managed Services,5794.75,25.9
+2026-W38,Networking,2180.86,9.7
+2026-W38,Storage,8212.51,36.7
+2026-W39,Compute,6237.16,27.7
+2026-W39,Managed Services,5847.45,25.9
+2026-W39,Networking,2236.55,9.9
+2026-W39,Storage,8212.57,36.4
+2026-W40,Compute,6272.8,26.6
+2026-W40,Managed Services,5873.03,24.9
+2026-W40,Networking,3153.59,13.4
+2026-W40,Storage,8287.92,35.1
+2026-W41,Compute,6285.13,27.7
+2026-W41,Managed Services,5898.32,26.0
+2026-W41,Networking,2252.89,9.9
+2026-W41,Storage,8281.41,36.5
+2026-W42,Compute,6280.56,27.6
+2026-W42,Managed Services,5886.04,25.8
+2026-W42,Networking,2273.13,10.0
+2026-W42,Storage,8338.78,36.6
+2026-W43,Compute,3743.05,27.7
+2026-W43,Managed Services,3500.02,25.9
+2026-W43,Networking,1326.78,9.8
+2026-W43,Storage,4955.37,36.6

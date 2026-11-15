@@ -1,0 +1,4 @@
+query,before_ms,plain_index_ms,after_ms,speedup,plan_before,plan_after
+"A: one resource, one month",139.63,0.1,0.1,1460.5,SCAN fact_big,SEARCH fact_big USING INDEX ix_res_date (resource_key=? AND date_key>? AND date_key<?)
+"B: service totals, 15-day window",267.11,642.74,131.71,2.0,SCAN fact_big | USE TEMP B-TREE FOR GROUP BY,SEARCH fact_big USING COVERING INDEX ix_date_svc_cost (date_key>? AND date_key<?) | USE TEMP B-TREE FOR GROUP BY
+"C: daily trend, account+service",164.36,6.69,6.83,24.1,SCAN fact_big | USE TEMP B-TREE FOR GROUP BY,SEARCH fact_big USING COVERING INDEX ix_acct_svc_date_cost (account_key=? AND service_key=?)

@@ -1,0 +1,11 @@
+RECONCILIATION REPORT
+----------------------------------------------------------------------
+[PASS] Source rows == cleaned rows: 27150 vs 27150
+[PASS] Cleaned rows == valid + quarantined: 27150 vs 27150
+[PASS] Valid rows == fact rows in DW: 26908 vs 26908
+[PASS] Quarantine file == quarantine table: 242 vs 242
+[PASS] Valid cost sum == DW cost sum: 287451.63 vs 287451.63
+[PASS] Cleaned cost == valid + quarantined cost: 289355.86 vs 289355.86
+[PASS] MD5(line_item_ids) file vs DW: d7533a01bd6f154c07b0fd7e7b4bc66a vs d7533a01bd6f154c07b0fd7e7b4bc66a
+----------------------------------------------------------------------
+RESULT: ALL CHECKS PASSED - zero data loss

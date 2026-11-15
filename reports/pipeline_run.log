@@ -1,0 +1,7 @@
+SUCCESS  ingest_billing          1.9s
+SUCCESS  validate_quality        1.8s
+SUCCESS  load_warehouse          2.4s
+SUCCESS  reconcile               1.8s
+SUCCESS  anomaly_alerts          2.0s
+SUCCESS  unit_economics          1.6s
+SUCCESS  optimisation_audit      2.8s

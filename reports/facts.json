@@ -1,0 +1,227 @@
+{
+ "ingest": {
+  "rows_csv": 20130,
+  "rows_json": 7020,
+  "schema_drift_columns": [
+   "lineItem/LegalEntity"
+  ],
+  "unparseable_dates": 0,
+  "cost_imputed_rows": 199,
+  "rows_out": 27150,
+  "total_cost": 289355.86
+ },
+ "quarantine": {
+  "DUPLICATE_LINE_ITEM": 150,
+  "NEGATIVE_COST": 12,
+  "NULL_RESOURCE_ID": 80
+ },
+ "fact_rows": 26908,
+ "total_cost": 287451.63,
+ "index": [
+  {
+   "query": "A: one resource, one month",
+   "before_ms": 139.63,
+   "plain_index_ms": 0.1,
+   "after_ms": 0.1,
+   "speedup": 1460.5
+  },
+  {
+   "query": "B: service totals, 15-day window",
+   "before_ms": 267.11,
+   "plain_index_ms": 642.74,
+   "after_ms": 131.71,
+   "speedup": 2.0
+  },
+  {
+   "query": "C: daily trend, account+service",
+   "before_ms": 164.36,
+   "plain_index_ms": 6.69,
+   "after_ms": 6.83,
+   "speedup": 24.1
+  }
+ ],
+ "partition": [
+  {
+   "scenario": "Partition pruning: Oct 1-15 service totals",
+   "unoptimised_ms": 276.7,
+   "optimised_ms": 155.42,
+   "reduction_pct": 43.8
+  },
+  {
+   "scenario": "Clustering key (service,date): svc=3, Oct",
+   "unoptimised_ms": 149.27,
+   "optimised_ms": 7.12,
+   "reduction_pct": 95.2
+  }
+ ],
+ "anomalies": 6,
+ "top_anoms": [
+  {
+   "scope": "AWSDataTransfer/staging",
+   "date": "2026-10-10",
+   "cost": 503.0,
+   "baseline": 85.34,
+   "mod_z": 111.0,
+   "classic_z": 54.3,
+   "delta": 417.66
+  },
+  {
+   "scope": "AWSDataTransfer/data-platform",
+   "date": "2026-10-10",
+   "cost": 368.71,
+   "baseline": 62.26,
+   "mod_z": 78.3,
+   "classic_z": 80.7,
+   "delta": 306.46
+  },
+  {
+   "scope": "AmazonEC2/prod",
+   "date": "2026-09-10",
+   "cost": 248.03,
+   "baseline": 78.62,
+   "mod_z": 85.2,
+   "classic_z": 34.5,
+   "delta": 169.4
+  },
+  {
+   "scope": "AmazonEC2/prod",
+   "date": "2026-09-11",
+   "cost": 246.22,
+   "baseline": 78.98,
+   "mod_z": 76.0,
+   "classic_z": 3.4,
+   "delta": 167.24
+  }
+ ],
+ "unit": [
+  {
+   "index": 0,
+   "month": "2026-08",
+   "total_cost": 96262.9074,
+   "cost_per_1k_req": 1.4293,
+   "cost_per_customer_day": 1.6537,
+   "compute_per_proc_hr": 0.8965
+  },
+  {
+   "index": 1,
+   "month": "2026-09",
+   "total_cost": 96054.5574,
+   "cost_per_1k_req": 1.3139,
+   "cost_per_customer_day": 1.5681,
+   "compute_per_proc_hr": 0.9485
+  },
+  {
+   "index": 2,
+   "month": "2026-10",
+   "total_cost": 95134.1635,
+   "cost_per_1k_req": 1.219,
+   "cost_per_customer_day": 1.4926,
+   "compute_per_proc_hr": 0.9517
+  }
+ ],
+ "rate": [
+  {
+   "scenario": "On-Demand (baseline)",
+   "annual_savings": 0,
+   "pct_of_eligible": 0.0
+  },
+  {
+   "scenario": "1-yr Reserved Instance",
+   "annual_savings": 126620,
+   "pct_of_eligible": 24.5
+  },
+  {
+   "scenario": "3-yr Reserved Instance",
+   "annual_savings": 198974,
+   "pct_of_eligible": 38.5
+  },
+  {
+   "scenario": "1-yr Compute Savings Plan",
+   "annual_savings": 97678,
+   "pct_of_eligible": 18.9
+  },
+  {
+   "scenario": "3-yr Compute Savings Plan",
+   "annual_savings": 166414,
+   "pct_of_eligible": 32.2
+  },
+  {
+   "scenario": "Spot for non-prod EC2 only",
+   "annual_savings": 13533,
+   "pct_of_eligible": 2.6
+  },
+  {
+   "scenario": "RECOMMENDED: 1-yr SP + Spot (non-prod)",
+   "annual_savings": 111211,
+   "pct_of_eligible": 21.5
+  }
+ ],
+ "k8s": {
+  "pod_saving_month": 964.549,
+  "node_saving_month": 560.64,
+  "nodes_now": 8.0,
+  "nodes_needed": 7.0,
+  "overprov": 34.0
+ },
+ "audit": {
+  "run_rate": 1198057,
+  "total_saving": 243760,
+  "pct": 20.3
+ },
+ "levers": [
+  {
+   "lever": "Savings Plan + Spot (rate)",
+   "annual_saving": 111211,
+   "pct_of_run_rate": 9.3
+  },
+  {
+   "lever": "Non-prod scheduling (assumption: 50% hrs off)",
+   "annual_saving": 62368,
+   "pct_of_run_rate": 5.2
+  },
+  {
+   "lever": "K8s right-sizing (pods+nodes)",
+   "annual_saving": 18302,
+   "pct_of_run_rate": 1.5
+  },
+  {
+   "lever": "S3 lifecycle tiering",
+   "annual_saving": 39531,
+   "pct_of_run_rate": 3.3
+  },
+  {
+   "lever": "Orphaned resource cleanup (assumption: 30% removable)",
+   "annual_saving": 12348,
+   "pct_of_run_rate": 1.0
+  }
+ ],
+ "top_services": [
+  {
+   "service_code": "AmazonS3",
+   "sum": 84607.823,
+   "pct_of_total": 29.4
+  },
+  {
+   "service_code": "AmazonEKS",
+   "sum": 48335.5476,
+   "pct_of_total": 16.8
+  },
+  {
+   "service_code": "AmazonRDS",
+   "sum": 38996.423,
+   "pct_of_total": 13.6
+  },
+  {
+   "service_code": "AmazonEBS",
+   "sum": 19751.7453,
+   "pct_of_total": 6.9
+  },
+  {
+   "service_code": "AmazonRedshift",
+   "sum": 19629.2881,
+   "pct_of_total": 6.8
+  }
+ ],
+ "storage_saving_year": 39531,
+ "untagged": 8
+}

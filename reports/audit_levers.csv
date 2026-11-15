@@ -1,0 +1,6 @@
+lever,annual_saving,pct_of_run_rate
+Savings Plan + Spot (rate),111211,9.3
+Non-prod scheduling (assumption: 50% hrs off),62368,5.2
+K8s right-sizing (pods+nodes),18302,1.5
+S3 lifecycle tiering,39531,3.3
+Orphaned resource cleanup (assumption: 30% removable),12348,1.0

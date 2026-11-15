@@ -1,0 +1,30 @@
+{
+  "Rules": [
+    {
+      "ID": "cold-data-tiering",
+      "Status": "Enabled",
+      "Filter": { "Tag": { "Key": "access-pattern", "Value": "cold" } },
+      "Transitions": [
+        { "Days": 30,  "StorageClass": "STANDARD_IA" },
+        { "Days": 90,  "StorageClass": "GLACIER" },
+        { "Days": 365, "StorageClass": "DEEP_ARCHIVE" }
+      ],
+      "NoncurrentVersionExpiration": { "NoncurrentDays": 90 },
+      "AbortIncompleteMultipartUpload": { "DaysAfterInitiation": 7 }
+    },
+    {
+      "ID": "warm-data-ia-only",
+      "Status": "Enabled",
+      "Filter": { "Tag": { "Key": "access-pattern", "Value": "warm" } },
+      "Transitions": [ { "Days": 60, "StorageClass": "STANDARD_IA" } ],
+      "AbortIncompleteMultipartUpload": { "DaysAfterInitiation": 7 }
+    },
+    {
+      "ID": "hot-data-intelligent-tiering",
+      "Status": "Enabled",
+      "Filter": { "Tag": { "Key": "access-pattern", "Value": "hot" } },
+      "Transitions": [ { "Days": 0, "StorageClass": "INTELLIGENT_TIERING" } ],
+      "AbortIncompleteMultipartUpload": { "DaysAfterInitiation": 7 }
+    }
+  ]
+}

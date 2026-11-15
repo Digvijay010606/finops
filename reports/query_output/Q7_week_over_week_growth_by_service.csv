@@ -1,0 +1,16 @@
+service_code,wk,cost,wow_pct
+AWSDataTransfer,2026-W40,2225.31,69.9
+AmazonEC2,2026-W36,1865.3,36.0
+AWSDataTransfer,2026-W39,1309.63,5.3
+AmazonCloudFront,2026-W38,937.16,4.2
+AmazonRedshift,2026-W37,1537.72,2.5
+AmazonDynamoDB,2026-W36,861.9,2.3
+AmazonEBS,2026-W40,1569.57,2.2
+AmazonRDS,2026-W34,3017.19,2.2
+AmazonRedshift,2026-W39,1554.78,2.1
+AmazonCloudWatch,2026-W39,351.39,2.0
+AmazonCloudFront,2026-W36,907.44,1.7
+AmazonEKS,2026-W33,3738.62,1.7
+AmazonEBS,2026-W38,1549.56,1.5
+AmazonCloudWatch,2026-W35,340.16,1.4
+AmazonRDS,2026-W37,3050.25,1.4

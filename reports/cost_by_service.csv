@@ -1,0 +1,12 @@
+cost_category,service_code,sum,count,pct_of_total
+Storage,AmazonS3,84607.823,3587,29.4
+Compute,AmazonEKS,48335.5476,1796,16.8
+Managed Services,AmazonRDS,38996.423,2241,13.6
+Storage,AmazonEBS,19751.7453,2690,6.9
+Managed Services,AmazonRedshift,19629.2881,448,6.8
+Compute,AmazonEC2,18384.2618,7177,6.4
+Networking,AWSDataTransfer,17420.1015,1343,6.1
+Compute,AWSLambda,13027.1761,3586,4.5
+Networking,AmazonCloudFront,11751.4774,895,4.1
+Managed Services,AmazonDynamoDB,11134.5015,1796,3.9
+Managed Services,AmazonCloudWatch,4413.283,1349,1.5

@@ -1,0 +1,7 @@
+scope,date,cost,baseline,mod_z,classic_z,delta
+AWSDataTransfer/staging,2026-10-10,503.0,85.34,111.0,54.3,417.66
+AWSDataTransfer/data-platform,2026-10-10,368.71,62.26,78.3,80.7,306.46
+AmazonEC2/prod,2026-09-10,248.03,78.62,85.2,34.5,169.4
+AmazonEC2/prod,2026-09-11,246.22,78.98,76.0,3.4,167.24
+AWSDataTransfer/prod,2026-10-10,179.72,31.35,128.7,25.9,148.37
+AmazonEC2/prod,2026-09-12,217.75,78.98,19.5,1.9,138.77

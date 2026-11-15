@@ -1,0 +1,6 @@
+usage_type,cost
+BoxUsage:c5.xlarge,5632.13
+BoxUsage:m5.xlarge,4848.25
+BoxUsage:r5.large,3404.95
+BoxUsage:m5.large,3254.38
+BoxUsage:t3.medium,1244.55

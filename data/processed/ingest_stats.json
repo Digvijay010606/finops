@@ -1,0 +1,11 @@
+{
+  "rows_csv": 20130,
+  "rows_json": 7020,
+  "schema_drift_columns": [
+    "lineItem/LegalEntity"
+  ],
+  "unparseable_dates": 0,
+  "cost_imputed_rows": 199,
+  "rows_out": 27150,
+  "total_cost": 289355.86
+}
